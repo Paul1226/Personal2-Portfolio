@@ -1,0 +1,51 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+// import fonts
+import "@fontsource/quattrocento/400.css";
+import "@fontsource/quattrocento/700.css";
+
+// Supports weights 200-700
+import '@fontsource-variable/oswald';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--ttlcolor: #303030;
+		--phrcolor: #909090;
+		--bgcolor: #CAC6BB;
+		/* --brdcolor: #F0C868; */
+
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: "Quattrocento", serif;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-family: "Oswald", sans-serif;
+
+	}
+</style>
