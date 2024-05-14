@@ -1,12 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../sections/Header.astro';
+import HeroImage from '../sections/HeroImage.astro';
+import HeroServices from '../sections/HeroServices.astro';
+import HeroSpecialist from '../sections/HeroSpecialist.astro';
 ---
 
 <Layout title="Personal2 | Portfolio">
 	<Header />
 	<main>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos facere amet tenetur? Praesentium excepturi distinctio suscipit laudantium earum, ex, saepe numquam, recusandae exercitationem quaerat dolores. Minima hic saepe numquam nesciunt minus blanditiis doloribus perferendis ipsam, nostrum delectus, itaque voluptatum? Praesentium deleniti eius dolor, repellat dolorum dolore dignissimos magnam natus consequatur maxime iste vel itaque earum commodi fugiat! Consequatur impedit culpa quaerat similique unde aut, cupiditate ex eveniet quod voluptates pariatur, voluptate porro ducimus. Velit tempore in sed. Modi provident maxime, repudiandae laborum veritatis voluptatem pariatur ad aspernatur praesentium totam dicta corporis fugit necessitatibus animi dolores obcaecati itaque enim exercitationem. Nisi laudantium dignissimos, excepturi, ipsum blanditiis officia architecto dicta officiis, sit maxime quibusdam quaerat aliquid molestiae quis nulla qui velit soluta fugiat ipsa nostrum? Fugiat quod excepturi porro sit minus aut distinctio reiciendis. Hic nesciunt dolorem possimus exercitationem, accusantium a eos praesentium recusandae, quaerat assumenda quam mollitia quidem saepe molestias consequatur iste temporibus necessitatibus similique autem facere expedita. Iusto reiciendis, ratione ducimus nihil reprehenderit perspiciatis quis adipisci labore repudiandae quaerat excepturi quia natus sit debitis nam repellat voluptatibus soluta ipsam esse commodi! Sunt, aspernatur laudantium, sapiente inventore perspiciatis ipsam et quaerat fugiat aut quos, doloremque ab nihil voluptatum nulla reiciendis.</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos facere amet tenetur? Praesentium excepturi distinctio suscipit laudantium earum, ex, saepe numquam, recusandae exercitationem quaerat dolores. Minima hic saepe numquam nesciunt minus blanditiis doloribus perferendis ipsam, nostrum delectus, itaque voluptatum? Praesentium deleniti eius dolor, repellat dolorum dolore dignissimos magnam natus consequatur maxime iste vel itaque earum commodi fugiat! Consequatur impedit culpa quaerat similique unde aut, cupiditate ex eveniet quod voluptates pariatur, voluptate porro ducimus. Velit tempore in sed. Modi provident maxime, repudiandae laborum veritatis voluptatem pariatur ad aspernatur praesentium totam dicta corporis fugit necessitatibus animi dolores obcaecati itaque enim exercitationem. Nisi laudantium dignissimos, excepturi, ipsum blanditiis officia architecto dicta officiis, sit maxime quibusdam quaerat aliquid molestiae quis nulla qui velit soluta fugiat ipsa nostrum? Fugiat quod excepturi porro sit minus aut distinctio reiciendis. Hic nesciunt dolorem possimus exercitationem, accusantium a eos praesentium recusandae, quaerat assumenda quam mollitia quidem saepe molestias consequatur iste temporibus necessitatibus similique autem facere expedita. Iusto reiciendis, ratione ducimus nihil reprehenderit perspiciatis quis adipisci labore repudiandae quaerat excepturi quia natus sit debitis nam repellat voluptatibus soluta ipsam esse commodi! Sunt, aspernatur laudantium, sapiente inventore perspiciatis ipsam et quaerat fugiat aut quos, doloremque ab nihil voluptatum nulla reiciendis.</p>
+		<HeroImage />
+		<section class="main_section">
+			<HeroSpecialist />
+			<HeroServices />
+		</section>
 	</main>
 </Layout>
+
+<style>
+	main{
+		width: 90%;
+		margin: 0 auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		margin-block: 1.5rem;
+
+		.main_section{
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		main{
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			gap: 2rem;
+			.main_section{
+				height: 80vh;
+				overflow: auto;
+				scrollbar-width: thin;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,73 @@
+---
+
+---
+<section>
+    <h3>Web Specialist based in Jakarta</h3>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </main>
+    <a href="#">Hire me</a>
+    <footer>
+        <article><span>13 Years</span>Experience</article>
+        <article><span>256+</span>Clients</article>
+        <article><span>99.8%</span>Satisfaction</article>
+    </footer>
+</section>
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    
+        h3{
+            font-size: 2rem;
+            text-align: center;
+            line-height: 2.2rem;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            p{
+                line-height: 1.7rem;
+            }
+        }
+        a{
+            width: max-content;
+            display: inline-flex;
+            background-color: var(--ttlcolor);
+            color: White;
+            padding: 0.8rem 1.6rem;
+            border-radius: 0.2rem;
+        }
+        footer{
+            display: flex;
+            gap: 1.5rem;
+
+            article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                color: var(--phrcolor);
+                border-radius: 1rem;
+                padding: .5rem .7rem;
+                transition: box-shadow 300ms ease-in-out;
+                &:hover{
+                    /* background-color: #ff0000; */
+                    box-shadow: 0px 5px 5px #00000020;
+                }
+                span{
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    font-family: 'Oswald Variable', sans-serif;
+                    color: var(--ttlcolor);
+                    
+                }
+            }
+        }
+    }
+</style>
